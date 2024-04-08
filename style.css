@@ -1,139 +1,399 @@
-* {
-    padding: 0px;
-    margin: 0;
-    border: 0;
-}
-
-body{
-    background-image: url(/img/fundo.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;    
-    
-}
-
-
-:root{
-    --cor1: #2D727C;
-    --cor2:#5FA2AC;
-    --cor3:#62DFAB;
-    --cor4:#252B2C;
-    --cor5:#ffff;
-}
-
-@font-face {
-    font-family: 'Humanist777';
-    src: url(/tipografia/Humanist\ 777\ Black\ BT.ttf)format('opentype');
-}
-
-@font-face {
-    font-family: 'Humanisti521BT';
-    src: url(/tipografia/Humanist521BT.ttf)format('opentype');
-}
-
-@font-face {
-    font-family: 'Humanisti521LBT';
-    src: url(/tipografia/Humanist521LightBT.ttf)format('opentype');
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
 
 :root{
-    --font-black: "Humanist777";
-    --font-bt: "Humanisti521BT";
-    --font-lbt:"Humanisti521LBT";  
+  --cor1: #2D727C;
+  --cor2:#5FA2AC;
+  --cor3:#62DFAB;
+  --cor4:#252B2C;
+  --cor5:#ffff;
 }
 
- .container-bg{
-    margin-top: 50px;
-    flex-direction: column ;
-    align-items: center;
-    
+@font-face {
+  font-family: 'Humanist777';
+  src: url(/tipografia/Humanist\ 777\ Black\ BT.ttf)format('opentype');
 }
 
-h3{  
-    margin-left: 250px;
-    font-family:var(--font-black);
-    font-size: 2.6rem;
-    color:var(--cor5);
-    text-shadow: 5px 5px 5px rgba(102, 101, 101, 0.74) ;
-    margin-bottom: 0;
-    text-align: justify;
-    display: inline-block;
-   
+@font-face {
+  font-family: 'Humanisti521BT';
+  src: url(/tipografia/Humanist521BT.ttf)format('opentype');
 }
 
-p {
-    background-color: black;
-    border: 15px solid black;
-    width: 450px;
-    height: 30px;
-    font-family: var(--font-lbt);
-    color:var(--cor5);
-    font-size: 1.8rem;
-    margin-left: 250px;
-    text-align: center;
-    align-items: center;
-   
+@font-face {
+  font-family: 'Humanisti521LBT';
+  src: url(/tipografia/Humanist521LightBT.ttf)format('opentype');
 }
 
-#grid{
-    display: flex;
-    
+:root{
+  --font-black: "Humanist777";
+  --font-bt: "Humanisti521BT";
+  --font-lbt:"Humanisti521LBT";  
 }
 
-.logo img{
-    width: 40%;
-    height: 60%;
-    margin: 70px;
-    display: grid;
-    margin-top: 30px;
-    margin-left: 350px;
-    filter: drop-shadow(30px 0 30px #ffffff) ;
-    
+.container {
+  background-image: url('/img/fundo.jpg') ; 
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
-button  {
-    background-color: rgb(0, 0, 0);
-    border:  10px solid rgb(0, 0, 0);
-    width: 320px;
-    height: auto;
-    margin-left: 80px;
+.content {
+  margin-top: 80px;
+  padding-left: 170px;
+  width: 650px;
+  height: 70px;
 } 
 
-h4{
-    font-family: var(--font-black);
-    color:rgb(41, 41, 165);  
-    text-shadow: 0.1em 0.1em 0.1em rgba(255, 255, 255, 0.74) ;
-    margin-top: 130px;
-    margin-left: 50px;
-    font-size: 1.4rem;
-    -webkit-text-stroke: 0.3px #ffffff;
-}
 
-i{
-    color:#ffffff;
-}
-
-.icone-whats {
-    width: 20px;
-    height: 20px;
-    background-color: rgb(211, 27, 27);
-    text-align: end;
-}
-
-a{
-    font-family: var(--font-black);
-    color:var(--cor5);
-    text-decoration: none; 
-    font-size: 1.2rem; 
+.titulo-content  {
+  color: var(--cor5);
+  font-size: 3rem;
+  font-family: var(--font-black) ; 
+  text-shadow: 15px 15px 15px rgba(102, 101, 101, 0.74);
 
 }
 
-footer{
-    text-align: center;
-    opacity: 0.5;
-    font-family: var(--font-lbt);
-    color: var(--cor5);
-    background-color: #252B2C;
-    font-size: 2.6rem;
-    margin: 0;
+.h3{
+  font-size: 100%;
+  font-weight: bold;
+}
+
+.h4{
+  font-size: 80%;
+  font-weight: bolder ;
+  
+}
+
+.button-container {
+  padding: 20px;
+  text-align: center;
+} 
+
+
+.botoes {
+  padding-top: 15px ;
+  margin-bottom: 15px;
+  background-color: black;
+  cursor: pointer;
+  display: grid;
+  width: 600px;
+  height: 70px;
+  font-family: var(--font-lbt);
+  color:var(--cor5);
+  font-size: 2rem;
+  text-align: center;
+}
+
+.grid{
+  display: flex;
+  padding-left: 130px; 
+  
+}
+
+#logo img{
+  width: 130%;
+  height: 70%;
+  margin: 70px;
+  display: grid;
+  margin-top: 20px;
+  margin-left: 80px;
+  filter: drop-shadow(30px 0 30px #ffffff);
+
+}
+
+.contato{
+  font-family: var(--font-black);
+  color:rgb(41, 41, 165);  
+  text-shadow: 0.1em 0.1em 0.1em rgba(255, 255, 255, 0.74) ;
+  margin-top: 70px;
+  margin-left: 500px;
+  font-size: 1.8rem;
+  -webkit-text-stroke: 0.3px #ffffff;
+  
+}
+
+.contact{
+  width: 450px;
+  height: auto;
+  padding-bottom: 10px;
+  
+}
+
+#whats {
+  border-radius: 10px;
+  background-color: black;
+  font-family: var(--font-bt);
+  color:var(--cor5);
+  font-weight:lighter; 
+  width: 400px;
+  height: 70px; 
+}
+
+#whats a {
+  color:var(--cor5);
+  text-decoration: none;
+  font-size: 2.5rem;
+}
+
+.icone-whats{
+  width: 40px;
+  height: 40px;
+  text-align: end;
+}
+
+#rodape{
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  align-items: center;
+  background-color: var(--cor4);
+  color: var(--cor5);
+  opacity: 0.7;
+  font-size: 4rem;
+  font-family: var(--font-lbt);
+  position: absolute;
+  bottom: 0;
+}
+
+/*celular */
+@media (min-width: 350px) and (max-width: 767px) {
+  .container {
+    display: block;
+    width: 100%;
+    padding: 0; /* Adicione margens para espaço extra */
     
+  }
+
+  .content {
+    width: 90%;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .titulo-content {
+    font-size: 3rem;
+    align-items: center;
+  }
+
+  .h3{
+    font-size: 130%;
+    font-weight: bold;
+  }
+  
+  .h4{
+    font-size: 100%;
+    font-weight: bolder ;
+    
+  }
+  .botoes {
+    width: 100%;
+    height: 90%;
+    font-size: 1.4rem;
+    align-items: center;
+  }
+
+  .grid {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+  #logo img {
+    width: 45%; /* Faça a imagem preencher a largura */
+    height: 40%;
+    margin: 0;
+    padding: 0; /* Margem superior e inferior */
+    justify-content: center;
+    margin-left: 120px;
+  }
+
+  .contato {
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 1.2rem;
+    width: 85%;
+  }
+
+  .contact{
+    width: 100%;
+    margin-top: 40px;
+    margin-left: 20%;
+  }
+
+  #whats {
+    width: 90%;
+    margin-left: 15%;
+  }
+
+  #whats a{
+    
+    font-size: 1.8rem;
+  }
+
+  #rodape {
+    position: absolute;
+    font-size: 2.4rem;
+    bottom: 80px;
+    display: flex; 
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    
+  }
+}
+
+/*tablet */
+@media (min-width: 468px) and (max-width: 1024px){  
+  .container {
+    display: block;
+    width: 100%;
+    padding: 0;   
+  }
+
+  .content {
+    width: 90%;
+    margin-top: 20px;
+    padding: 20px;
+  }
+
+  .titulo-content {
+    font-size: 3rem;
+    align-items: center;
+  }
+
+  .h3{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 100%;
+    font-size: 80%;
+    font-weight: bold;
+  }
+  
+  .h4{
+    margin-left: 20px;
+    width: 100%;
+    font-size: 70%;
+    font-weight: bolder ;
+    
+  }
+  .botoes {
+    width: 100%;
+    height: 90%;
+    font-size: 1.4rem;
+    align-items: center;
+  }
+
+  .grid {
+    display: block;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+  }
+
+  #logo img {
+    width: 35%;   
+    height: 40%;
+    margin: 0;
+    padding: 0;  
+    justify-content: center;
+    margin-left: 35%;
+    margin-top: 10%;
+  }
+
+  .contato {
+    margin-left: 0;
+    margin-top: 0;
+    font-size: 1.2rem;
+    width: 85%;
+  }
+
+  .contact{
+    width: 100%;
+    margin-top: 10%;
+    margin-left: 20%;
+    align-items: center;
+  }
+
+  #whats {
+    width: 90%;
+    margin-left: 15%;
+    align-items: center;
+  }
+
+  #whats a{
+    font-size: 1.8rem;
+  }
+
+  #rodape {
+    position: absolute;
+    font-size: 2.4rem;
+    bottom: 0;
+    display: flex; 
+    width: 100%;
+    padding: 0;
+    justify-content: center;
+    
+  }
+
+}
+
+
+/* Estilos para telas menores que 480px (por exemplo, smartphones em modo paisagem) */
+@media screen and (max-width: 480px) {
+  .titulo-content {
+    font-size: 1.5rem;
+  }
+
+  .botoes {
+    font-size: 1.2rem;
+  }
+
+  .contato {
+    font-size: 1.2rem;
+  }
+
+  #whats {
+    font-size: 1rem;
+  }
+}
+
+
+#rodape {
+  position: absolute; /* Mantenha o rodapé no fluxo do documento */
+  
+}
+
+  
+
+/* @media (min-width: 350px) and (max-width: 767px) { celular
+  .container{
+    align-items: center;
+    width: 100% ;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+}
+
+
+  .content{
+    width: 20%;
+  }
+
+
+  .titulo-content{
+    display: block;
+    width: 20%;
+    align-items: center;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) { Tablet
+
 }
