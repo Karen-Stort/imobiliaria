@@ -34,7 +34,7 @@
 }
 
 .container {
-  background-image: url('/img/fundo.jpg') ; 
+  background-image: url('./img/fundo.jpg') ; 
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
