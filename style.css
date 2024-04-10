@@ -34,13 +34,19 @@
 }
 
 .container {
-  background-image: url('./img/fundo.jpg') ; 
-  background-size: cover;
-  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  position: relative;
+}
+
+
+.container-bg::before{
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(./img/fundo.jpg) ;
+  background-size: cover;
+  z-index: -1;
 }
 
 .content {
@@ -131,7 +137,7 @@
   font-family: var(--font-bt);
   color:var(--cor5);
   font-weight:lighter; 
-  width: 400px;
+  width: 450px;
   height: 70px; 
 }
 
@@ -162,17 +168,24 @@
 }
 
 /*celular */
-@media (min-width: 350px) and (max-width: 767px) {
+@media (min-width: 350px) and (max-width: 850px) {
   .container {
     display: flex;
     width: 100%;
     padding: 0; /* Adicione margens para espaço extra */
-    background-position: -800px;
-    background-color:#252B2C;
-    opacity: 0.7;
+    /* background-position: -550px;
+    background-color:#252B2C; */
+
   }
 
- 
+  .container-bg::before{
+    content: "";
+    background-image: url(./img/fundo.jpg) ;
+    background-position-x: -550px ;
+    background-size: cover;
+    
+  }
+
   .content {
     width: 90%;
     margin-top: 20px;
@@ -185,17 +198,17 @@
   }
 
   .h3{
-    font-size: 130%;
+    font-size: 100%;
     font-weight: bold;
   }
   
   .h4{
-    font-size: 100%;
+    font-size: 90%;
     font-weight: bolder ;
     
   }
   .botoes {
-    width: 100%;
+    width: 60%;
     height: 90%;
     font-size: 1.4rem;
     align-items: center;
@@ -213,37 +226,40 @@
     height: 40%;
     margin: 0;
     padding: 0; /* Margem superior e inferior */
+    margin-top: 50px;
     justify-content: center;
-    margin-left: 120px;
+    margin-left: 80px;
   }
 
   .contato {
     margin-left: 0;
     margin-top: 0;
-    font-size: 1.2rem;
-    width: 85%;
+    font-size: 1rem;
+    width: 120%;
   }
 
   .contact{
     width: 100%;
-    margin-top: 40px;
-    margin-left: 20%;
+    height: auto;
+    font-size: 1rem;
+    margin-top: 5%;
+    margin-left: 12%;
   }
 
   #whats {
-    width: 90%;
-    margin-left: 15%;
+    width: 65%;
+    height: auto;
+    margin-left: 10%;
   }
 
   #whats a{
-    
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 
   #rodape {
     position: absolute;
-    font-size: 2.4rem;
-    bottom: 80px;
+    font-size: 1.6rem;
+    bottom: 0;
     display: flex; 
     width: 100%;
     padding: 0;
@@ -253,26 +269,24 @@
 }
 
 
-@media (min-width: 468px) and (max-width: 1024px){  /*tablet */
+@media (min-width: 768px) and (max-width: 1024px){  /*tablet */
   .container {
     display: block;
     width: 100%;
     padding: 0;   
-    background-position-x: -900px ;
-    opacity: 0.8;
+    background-position-x: -750px ;
+    
   }
 
   .container-bg::before{
     content: "";
     background-image: url(./img/fundo.jpg) ;
-    background-position-x: -600px ;
-    background-size: cover;
-    position: relative;
+    background-position-x: -750px ;
     
   }
 
   .content {
-    width: 90%;
+    width: 60%;
     margin-top: 20px;
     padding: 20px;
   }
@@ -293,7 +307,7 @@
   .h4{
     margin-left: 20px;
     width: 100%;
-    font-size: 70%;
+    font-size: 60%;
     font-weight: bolder ;
     
   }
@@ -348,8 +362,8 @@
 
   #rodape {
     position: absolute;
-    font-size: 2.4rem;
-    bottom: 50px;
+    font-size: 3rem;
+    bottom: 0;
     display: flex; 
     width: 100%;
     padding: 0;
